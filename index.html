@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -30,101 +31,100 @@
     </header>
     <div class="container my-3">
       <!-- Timeblocks go here -->
-      <div class="row my-5">
-        <div class="col">
+      <div class="row time-block">
+        <div class="col hour">
           9am
         </div>
-        <div class="col-9">
-          Input tasks
-        </div>
-        <div class="col">
-          Button
-        </div>
+          <textarea class="col-9 description"></textarea>
+          <button class="col saveBtn">
+            <span class="oi oi-lock-locked"></span>
+          </button> 
       </div>
-      <div class="row my-5">
+    
+      <div class="row">
         <div class="col">
           10am
         </div>
         <div class="col-9">
-          Input tasks
+          <input/>
         </div>
         <div class="col">
-          Button
+          <button class="btn btn-primary"></button> 
         </div>
       </div>
-      <div class="row my-5">
+      <div class="row">
         <div class="col">
           11am
         </div>
         <div class="col-9">
-          Input tasks
+          <input/>
         </div>
         <div class="col">
-          Button
+          <button class="btn btn-primary"></button> 
         </div>
       </div>
-      <div class="row my-5">
+      <div class="row">
         <div class="col">
           12pm
         </div>
         <div class="col-9">
-          Input tasks
+          <input/>
         </div>
         <div class="col">
-          Button
+          <button class="btn btn-primary"></button> 
         </div>
-      </div><div class="row my-5">
+      </div><div class="row">
         <div class="col">
           1pm
         </div>
         <div class="col-9">
-          Input tasks
+          <input/>
         </div>
         <div class="col">
-          Button
+          <button class="btn btn-primary"></button> 
         </div>
-      </div><div class="row my-5">
+      </div><div class="row">
         <div class="col">
           2pm
         </div>
         <div class="col-9">
-          Input tasks
+          <input/>
         </div>
         <div class="col">
-          Button
+          <button class="btn btn-primary"></button> 
         </div>
       </div>
-      <div class="row my-5">
+      <div class="row">
         <div class="col">
           3pm
         </div>
         <div class="col-9">
-          Input tasks
+          <input/>
         </div>
         <div class="col">
-          Button
+          <button class="btn btn-primary"></button> 
         </div>
       </div>
-      <div class="row my-5">
+      <div class="row">
         <div class="col">
           4pm
         </div>
         <div class="col-9">
-          Input tasks
+          <input/>
         </div>
         <div class="col">
-          Button
+          <button class="btn btn-primary"></button> 
         </div>
       </div>
-      <div class="row my-5">
+      <div class="row">
         <div class="col">
           5pm
         </div>
         <div class="col-9">
-          Input tasks
+          <input/>
         </div>
         <div class="col">
-          Button
+          <button class="btn btn-primary"></button> 
         </div>
       </div>
 
@@ -133,5 +133,6 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
