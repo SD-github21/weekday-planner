@@ -5,31 +5,34 @@ document.getElementById("currentDay").innerHTML = currentDay;
 // Add background styling dependent on time of day
 var events = [];
 
+
 $(".time-block").click(function() {
     // Get values for event and hour
     var eventText = $(this).find(".description").val();
-    // var eventHour = $(this).find("p.hour").text();
+    var eventHour = $(this).find("p.hour").text();
 
     console.log(eventText);
-
-
-// Save button is clicked
-    // $(".time-block").on("click", "button", (function() {
-    // var eventText = $("textarea.description").val();
-    // var eventHour = $(this).find("p.hour").text();
-    // console.log(eventText);
-
-            //Save in events array
-            // events.push(eventText);
-
-    // }
-
-    // console.log(eventHour);
-
-        
-        // console.log(events);
+    console.log(eventHour);
 
 });
+
+// Save button is clicked
+    $(".time-block").on("click", "button", (function() {
+    var eventText = $("textarea.description").val();
+    var eventHour = $(this).closest("p.hour").text();
+    console.log(eventText);
+    console.log(eventHour);
+
+    // Save in events array
+    events.push(eventText);
+    console.log(events);
+
+
+    }));
+
+
+
+
 
 
 
