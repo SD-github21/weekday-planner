@@ -2,121 +2,99 @@
 let currentDay = moment().format("dddd, MMMM Do YYYY");
 document.getElementById("currentDay").innerHTML = currentDay;
 let currentHour = moment().hour()
-console.log(currentHour);
 
 // Add background styling dependent on time of day
 // 9:00am
-nineAm = $("#9am").find("p.hour").text();
-nineAm = parseInt(nineAm.replace("am", ""));
-console.log(nineAm);
 nineAmText = $("#9am").find("textarea");
-console.log(nineAmText);
-
-if (nineAm < currentHour ) {
-    console.log(nineAm + "is less than" + currentHour)
+if (currentHour ===9 ) {
     $(nineAmText).addClass("past")
-} else if (nineAm.replace("am", "") >= currentHour) {
-    $(nineAmText).addClass("future")
+} else if (currentHour > 9) {
+    $(nineAmText).addClass("past")
 } else {
-    $(nineAmText).addClass("present")
+    $(nineAmText).addClass("future")
 };
 
 // 10:00am
-tenAm = $("#10am").find("p.hour").text();
-tenAm = parseInt(tenAm.replace("am", ""));
-console.log(tenAm);
 tenAmText = $("#10am").find("textarea");
-console.log(tenAmText);
-
-if (tenAm < currentHour ) {
-    console.log(tenAm + "is less than" + currentHour)
-    $(tenAmText).addClass("past")
-} else if (tenAm.replace("am", "") >= currentHour) {
-    $(tenAmText).addClass("future")
-} else {
+if (currentHour===10 ) {
     $(tenAmText).addClass("present")
+} else if (currentHour > 10) {
+    $(tenAmText).addClass("past")
+} else {
+    $(tenAmText).addClass("future")
 };
 
 //11:00am
-elevenAm = $("#11am").find("p.hour").text();
-elevenAm = parseInt(elevenAm.replace("am", ""));
 elevenAmText = $("#11am").find("textarea");
-
-if (elevenAm < currentHour ) {
-    $(elevenAmText).addClass("past")
-} else if (elevenAm.replace("am", "") >= currentHour) {
-    $(elevenAmText).addClass("future")
-} else {
+if (currentHour === 11) {
     $(elevenAmText).addClass("present")
+} else if (currentHour > 11) {
+    $(elevenAmText).addClass("past")
+} else {
+    $(elevenAmText).addClass("future")
 };
 
 // 12:00pm
-twelvePm = $("#12pm").find("p.hour").text();
-twelvePm = parseInt(twelvePm.replace("am", ""));
 twelvePmText = $("#12pm").find("textarea");
-
-if (twelvePm < currentHour ) {
-    $(twelvePmText).addClass("past")
-} else if (twelvePm.replace("pm", "") >= currentHour) {
-    $(twelvePmText).addClass("future")
-} else {
+if (currentHour === 12) {
     $(twelvePmText).addClass("present")
+} else if (currentHour > 12) {
+    $(twelvePmText).addClass("past")
+} else {
+    $(twelvePmText).addClass("future")
 };
 
 // 1:00pm
-onePm = $("#1pm").find("p.hour").text();
-onePm = parseInt(onePm.replace("am", ""));
 onePmText = $("#1pm").find("textarea");
-
-if (currentHour===13) {
-    $(onePmText).addClass("past")
-} else if (currentHour>=13) {
-    $(onePmText).addClass("future")
-} else {
+if (currentHour === 13) {
     $(onePmText).addClass("present")
+} else if (currentHour > 13) {
+    $(onePmText).addClass("past")
+} else {
+    $(onePmText).addClass("future")
 };
 
 // 2:00pm
-twoPm = $("#2pm").find("p.hour").text();
-twoPm = parseInt(twoPm.replace("am", ""));
 twoPmText = $("#2pm").find("textarea");
-
-if (currentHour <=14 ) {
-    $(twoPmText).addClass("past")
-} else if (currentHour === 14) {
+if (currentHour === 14 ) {
     $(twoPmText).addClass("present")
+} else if (currentHour > 14) {
+    $(twoPmText).addClass("past")
 } else {
     $(twoPmText).addClass("future")
 };
 
 
-// 1:00pm
-threePm = $("#3pm").find("p.hour").text();
-threePm = parseInt(threePm.replace("am", ""));
-threePmText = $("#3pm").find("textarea");
-
-if (currentHour < 15) {
-    $(threePmText).addClass("past")
-} else if (currentHour===15) {
-    $(threePmText).addClass("present")
-} else {
-    $(threePmText).addClass("future")
-};
-
-
 // 3:00pm
-threePm = $("#3pm").find("p.hour").text();
-threePm = parseInt(threePm.replace("am", ""));
 threePmText = $("#3pm").find("textarea");
-
-if (threePm < currentHour ) {
-    $(threePmText).addClass("past")
-} else if (threePm.replace("pm", "") >= currentHour) {
-    $(threePmText).addClass("future")
-} else {
+if (currentHour === 15) {
     $(threePmText).addClass("present")
+} else if (currentHour > 15) {
+    $(threePmText).addClass("past")
+} else {
+    $(threePmText).addClass("future")
 };
 
+
+// 4:00pm
+fourPmText = $("#4pm").find("textarea");
+if (currentHour === 16) {
+    $(fourPmText).addClass("present")
+} else if (currentHour > 16) {
+    $(fourPmText).addClass("past")
+} else {
+    $(fourPmText).addClass("future")
+};
+
+// 5:00pm
+fivePmText = $("#5pm").find("textarea");
+if (currentHour === 17) {
+    $(fivePmText).addClass("present")
+} else if (currentHour > 17) {
+    $(fivePmText).addClass("past")
+} else {
+    $(fivePmText).addClass("future")
+};
 
 
 
