@@ -6,20 +6,20 @@ document.getElementById("currentDay").innerHTML = currentDay;
 var events = [];
 
 
-$(".time-block").click(function() {
-    // Get values for event and hour
-    var eventText = $(this).find(".description").val();
-    var eventHour = $(this).find("p.hour").text();
+// $(".time-block").click(function() {
+//     // Get values for event and hour
+//     var eventText = $(this).find(".description").val();
+//     var eventHour = $(this).find("p.hour").text();
 
-    console.log(eventText);
-    console.log(eventHour);
+//     console.log(eventText);
+//     console.log(eventHour);
 
-});
+// });
 
 // Save button is clicked
     $(".time-block").on("click", "button", (function() {
     var eventText = $("textarea.description").val();
-    var eventHour = $(this).closest("p.hour").text();
+    var eventHour = $("p.hour").text();
     console.log(eventText);
     console.log(eventHour);
 
@@ -29,10 +29,6 @@ $(".time-block").click(function() {
 
 
     }));
-
-
-
-
 
 
 
