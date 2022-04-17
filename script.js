@@ -8,8 +8,8 @@ var events = {};
 // Save button is clicked
 $(".time-block").click(function() {
     // Get values for event and hour
-    var eventText = $(".description").val();
-    var eventHour = $("p.hour").text();
+    var eventText = $(this).find(".description").val();
+    var eventHour = $(this).find("p.hour").text();
 
     console.log(eventText);
     console.log(eventHour);
@@ -26,5 +26,3 @@ $(".time-block").click(function() {
 // var saveEvents = function() {
 //     localStorage.setItem("events", JSON.stringify(events));
 // };
-          
-  
