@@ -17,7 +17,8 @@ var events = [];
 // });
 
 // Save button is clicked
-    $(".time-block").on("click", "button", (function() {
+
+$(".time-block").on("click", "button", (function() {
     var eventText = $("textarea.description").val();
     var eventHour = $("p.hour").text();
     console.log(eventText);
