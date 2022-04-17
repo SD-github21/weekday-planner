@@ -3,23 +3,23 @@ let currentDay = moment().format("dddd, MMMM Do YYYY");
 document.getElementById("currentDay").innerHTML = currentDay;
 
 // Add background styling dependent on time of day
-var events = {};
+var events = [];
 
 // Save button is clicked
 $(".time-block").click(function() {
     // Get values for event and hour
     var eventText = $(this).find(".description").val();
-    var eventHour = $(this).find("p.hour").text();
+    // var eventHour = $(this).find("p.hour").text();
 
     console.log(eventText);
-    console.log(eventHour);
+    // console.log(eventHour);
 
         // Save in events array
-        // events.push({
-        //     event: eventText,
-        //     hour: eventHour
-        //   });
-
+        events.push({
+            event: eventText
+          });
+        
+        console.log(events);
 
         });
 
