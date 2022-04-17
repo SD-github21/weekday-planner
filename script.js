@@ -9,19 +9,22 @@ var events = {};
 $(".time-block").click(function() {
     // Get values for event and hour
     var eventText = $(".description").val();
-    var eventHour = $(".hour").val();
+    var eventHour = $("p.hour").text();
+
+    console.log(eventText);
+    console.log(eventHour);
 
         // Save in events array
-        events.push({
-            event: eventText,
-            hour: eventHour
-          });
+        // events.push({
+        //     event: eventText,
+        //     hour: eventHour
+        //   });
 
-          
+
         });
 
-var saveEvents = function() {
-    localStorage.setItem("events", JSON.stringify(events));
-};
+// var saveEvents = function() {
+//     localStorage.setItem("events", JSON.stringify(events));
+// };
           
   
