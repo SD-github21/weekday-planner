@@ -4,20 +4,64 @@ document.getElementById("currentDay").innerHTML = currentDay;
 let currentHour = moment().hour()
 console.log(currentHour);
 
-
 // Add background styling dependent on time of day
-// 
+// 9:00am
 nineAm = $("#9am").find("p.hour").text();
 nineAm = parseInt(nineAm.replace("am", ""));
 console.log(nineAm);
+nineAmText = $("#9am").find("textarea");
+console.log(nineAmText);
 
 if (nineAm < currentHour ) {
-    $("textarea").addClass(".past")
-} else if (nineAm >= currentHour) {
-    $("textarea").addClass(".future")
+    console.log(nineAm + "is less than" + currentHour)
+    $(nineAmText).addClass("past")
+} else if (nineAm.replace("am", "") >= currentHour) {
+    $(nineAmText).addClass("future")
 } else {
-    $("textarea").addClass(".present")
-}
+    $(nineAmText).addClass("present")
+};
+
+// 10:00am
+tenAm = $("#10am").find("p.hour").text();
+tenAm = parseInt(tenAm.replace("am", ""));
+console.log(tenAm);
+tenAmText = $("#10am").find("textarea");
+console.log(tenAmText);
+
+if (tenAm < currentHour ) {
+    console.log(tenAm + "is less than" + currentHour)
+    $(tenAmText).addClass("past")
+} else if (nineAm.replace("am", "") >= currentHour) {
+    $(tenAmText).addClass("future")
+} else {
+    $(tenAmText).addClass("present")
+};
+
+
+tenAm = $("#10am").find("p.hour").text();
+tenAm = parseInt(tenAm.replace("am", ""));
+console.log(tenAm);
+tenAmText = $("#10am").find("textarea");
+console.log(tenAmText);
+
+if (tenAm < currentHour ) {
+    console.log(tenAm + "is less than" + currentHour)
+    $(tenAmText).addClass("past")
+} else if (nineAm.replace("am", "") >= currentHour) {
+    $(tenAmText).addClass("future")
+} else {
+    $(tenAmText).addClass("present")
+};
+
+
+
+
+
+
+
+
+
+
 
 
 var events = [];
