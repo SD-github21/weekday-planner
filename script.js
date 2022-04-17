@@ -6,16 +6,18 @@ document.getElementById("currentDay").innerHTML = currentDay;
 var events = {};
 
 // Save button is clicked
-$("#calendar .saveBtn").click(function() {
+$(".time-block").click(function() {
     // Get values for event and hour
-    var eventText = $("#eventDescription").val();
-    var eventHour = $("#eventHour").val();
+    var eventText = $(".description").val();
+    var eventHour = $(".hour").val();
 
         // Save in events array
         events.push({
             event: eventText,
             hour: eventHour
           });
+
+          
         });
 
 var saveEvents = function() {
