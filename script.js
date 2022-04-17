@@ -100,34 +100,31 @@ if (currentHour === 17) {
 
 var events = [];
 
-
-// $(".time-block").click(function() {
-//     // Get values for event and hour
-//     var eventText = $(this).find(".description").val();
-//     var eventHour = $(this).find("p.hour").text();
-
-//     console.log(eventText);
-//     console.log(eventHour);
-
-// });
-
 // Save button is clicked
 
-$(".time-block").on("click", "button", (function() {
-    var eventText = $("textarea.description").val();
-    var eventHour = $("p.hour").text();
+$("#9am").on("click", "button", (function() {
+    var eventText = $("#9amText").val();
     console.log(eventText);
-    console.log(eventHour);
+
+    // Save in events array
+
+    events.push(eventText);
+    console.log(events);
+     }));
+
+    
+
+$("#10am").on("click", "button", (function() {
+    var eventText = $("#10amText").val();
+    console.log(eventText);
 
     // Save in events array
     events.push(eventText);
     console.log(events);
-
-
     }));
 
 
 
-// var saveEvents = function() {
-//     localStorage.setItem("events", JSON.stringify(events));
-// };
+
+console.log(events);
+    localStorage.setItem("events", JSON.stringify(events));
