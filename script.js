@@ -15,9 +15,7 @@ $(".time-block").click(function() {
     // console.log(eventHour);
 
         // Save in events array
-        events.push({
-            event: eventText
-          });
+        events.push(eventText);
         
         console.log(events);
 
