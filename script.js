@@ -149,3 +149,15 @@ $(".row").each(function() {
 // parent find and use this though to identify the button
 
 //   object of time: "id"; events: value change events to an object with key value pairs
+
+// $(".row").each(function() {
+//     $(".saveBtn").on("click", function(){
+//       $(this) // RETURNS THE BUTTON CLICKED
+//     })
+// });
+
+// $(".saveBtn").parent() will give the div.row that the .saveBtn is in
+
+// $("div.row").find("textarea") would find a textarea inside of the div.row
+
+// $("div.row").find("section") will return the first section element that it finds in div.row
