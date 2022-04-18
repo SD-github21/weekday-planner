@@ -98,7 +98,7 @@ if (currentHour === 17) {
 
 
 
-var events = [];
+var events = {};
 
 // Save button is clicked
 
@@ -123,6 +123,7 @@ var events = [];
 
 
 // Attempts to consolidate above code into a more "DRY" function
+//Attempt #1
 // $each(".row").on("click", "button", function(id) {
 //     var eventText = $("id").val();
 //     console.log(eventText);
@@ -132,6 +133,7 @@ var events = [];
 //     localStorage.setItem("events", JSON.stringify(events));
 // }));
 
+//Attempt#2
 $(".row").each(function() {
     $(".saveBtn").on("click", function(){
         var eventText = $("textarea").val();
@@ -143,3 +145,7 @@ $(".row").each(function() {
     })
 
   });
+
+// parent find and use this though to identify the button
+
+//   object of time: "id"; events: value change events to an object with key value pairs
