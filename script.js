@@ -105,26 +105,32 @@ var events = [];
 $("#9am").on("click", "button", (function() {
     var eventText = $("#9amText").val();
     console.log(eventText);
-
     // Save in events array
-
     events.push(eventText);
     console.log(events);
+    localStorage.setItem("events", JSON.stringify(events));
      }));
-
-    
-
+   
 $("#10am").on("click", "button", (function() {
     var eventText = $("#10amText").val();
     console.log(eventText);
-
     // Save in events array
     events.push(eventText);
     console.log(events);
+    localStorage.setItem("events", JSON.stringify(events));
     }));
 
 
 
+$(".row").on("click", "button", function() {
+    $("textarea").each(function(id) {
+        var eventText = $("textarea"[id]).val();
+        console.log(eventText);
+            // Save in events array
+            events.push(eventText);
+            console.log(events);
+            localStorage.setItem("events", JSON.stringify(events));
 
-console.log(events);
-    localStorage.setItem("events", JSON.stringify(events));
+
+    })});
+    
