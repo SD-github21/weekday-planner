@@ -134,19 +134,37 @@ var events = {};
 // }));
 
 //Attempt#2
-$(".row").each(function() {
-    $(".saveBtn").on("click", function(){
+// $(".row").each(function() {
+//     $(".saveBtn").on("click", function(){
+//         $(this).parent().find("textarea");
+//         var eventText = $("textarea").val();
+//         var eventID = $("textarea").attr("id");
+//         console.log(eventText); 
+//         console.log(eventID)
+//         $("textarea").each(function(){
+//             events.push($(this).attr("id"));
+
+// Attempt#3
+    $(".saveBtn").each(function() {
+        $(this).on("click", function(){
+        $(this).parent().find("textarea");
         var eventText = $("textarea").val();
+        var eventID = $("textarea").attr("id");
         console.log(eventText); 
+        console.log(eventID)
+        // $("textarea").each(function(){
+                
+        //     events.push($(this).attr("id"));
+
+
     // Save in events array
-    events.push(eventText);
-    console.log(events);
-    localStorage.setItem("events", JSON.stringify(events));
+    // events.push(eventText);
+    // console.log(events);
+    // localStorage.setItem("events", JSON.stringify(events));
     })
 
   });
 
-// parent find and use this though to identify the button
 
 //   object of time: "id"; events: value change events to an object with key value pairs
 
