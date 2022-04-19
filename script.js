@@ -121,6 +121,95 @@ var events = {};
 //     localStorage.setItem("events", JSON.stringify(events));
 //     }));
 
+// Attempt#3
+$(".saveBtn").each(function() {
+    $(this).on("click", function(){
+    $(this).parent().find("textarea");
+    var eventText = $("textarea").val();
+    var eventID = $("textarea").attr("id");
+    console.log(eventText); 
+    console.log(eventID)
+})
+
+});
+
+//Second part of function to save data
+    // $("textarea").each(function(){
+            
+    //     events.push($(this).attr("id"));
+
+
+// Save in events array
+// events.push(eventText);
+// console.log(events);
+// localStorage.setItem("events", JSON.stringify(events));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Attempt#4
+
+// var eventsAdd = function(data) {
+//     $(this).parent().find("textarea");
+//     var eventText = $("textarea").val();
+//     var eventID = $("textarea").attr("id");
+//     console.log(eventText[data]); 
+//     console.log(eventID[data])
+
+// };
+
+// $(".saveBtn").on("click", eventsAdd);
+
+// Attempt#3
+    // $(".saveBtn").each(function() {
+    //     $(this).on("click", (function(data){
+    //     $(this).parent().find("textarea");
+    //     var eventText = $("textarea").val();
+    //     var eventID = $("textarea").attr("id");
+    //     // $("textarea").each(function(){
+                
+    //     //     events.push($(this).attr("id"));
+
+
+    // Save in events array
+    // events.push(eventText);
+    // console.log(events);
+    // localStorage.setItem("events", JSON.stringify(events));
+    //     })
+
+    // )});
+
+
+
+
+//   object of time: "id"; events: value change events to an object with key value pairs
+
+// $(".row").each(function() {
+//     $(".saveBtn").on("click", function(){
+//       $(this) // RETURNS THE BUTTON CLICKED
+//     })
+// });
+
+// $(".saveBtn").parent() will give the div.row that the .saveBtn is in
+
+// $("div.row").find("textarea") would find a textarea inside of the div.row
+
+// $("div.row").find("section") will return the first section element that it finds in div.row
 
 // Attempts to consolidate above code into a more "DRY" function
 //Attempt #1
@@ -143,39 +232,3 @@ var events = {};
 //         console.log(eventID)
 //         $("textarea").each(function(){
 //             events.push($(this).attr("id"));
-
-// Attempt#3
-    $(".saveBtn").each(function() {
-        $(this).on("click", function(){
-        $(this).parent().find("textarea");
-        var eventText = $("textarea").val();
-        var eventID = $("textarea").attr("id");
-        console.log(eventText); 
-        console.log(eventID)
-        // $("textarea").each(function(){
-                
-        //     events.push($(this).attr("id"));
-
-
-    // Save in events array
-    // events.push(eventText);
-    // console.log(events);
-    // localStorage.setItem("events", JSON.stringify(events));
-    })
-
-  });
-
-
-//   object of time: "id"; events: value change events to an object with key value pairs
-
-// $(".row").each(function() {
-//     $(".saveBtn").on("click", function(){
-//       $(this) // RETURNS THE BUTTON CLICKED
-//     })
-// });
-
-// $(".saveBtn").parent() will give the div.row that the .saveBtn is in
-
-// $("div.row").find("textarea") would find a textarea inside of the div.row
-
-// $("div.row").find("section") will return the first section element that it finds in div.row
