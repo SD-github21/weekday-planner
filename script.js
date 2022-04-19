@@ -98,46 +98,16 @@ if (currentHour === 17) {
 
 
 // Save button is clicked
-
-// Successfully coded for each timeblock
-// $("#9am").on("click", "button", (function() {
-//     var eventText = $("#9amText").val();
-//     console.log(eventText);
-//     // Save in events array
-//     events.push(eventText);
-//     console.log(events);
-//     localStorage.setItem("events", JSON.stringify(events));
-//      }));
-   
-// $("#10am").on("click", "button", (function() {
-//     var eventText = $("#10amText").val();
-//     console.log(eventText);
-//     // Save in events array
-//     events.push(eventText);
-//     console.log(events);
-//     localStorage.setItem("events", JSON.stringify(events));
-//     }));
-
-
-// Attempt#5
-// $(".saveBtn").each(function() {
-//     $(this).on("click", function(){
-//     var eventText = $(this).parent().find("textarea").val().trim();
-//     var eventId = $(this).parent().attr("id").trim();
-//     events["event"] = eventText;
-//     events["time"] = eventId;
-//     console.log(events);
-//     localStorage.setItem("events", JSON.stringify(events));
-events = {};
-
+//Successfully was able to grab each calendar event and time, push to an array, and store in localStorage using each!
+events = [];
 
 $(".saveBtn").each(function() {
     $(this).on("click", (function(){
-     events.event = $(this).parent().find("textarea").val().trim();
-    events.time = $(this).parent().attr("id").trim();
-       console.log(events);
-       localStorage.setItem("events", JSON.stringify(events));
-
+     events.push({ 
+         event: ($(this).parent().find("textarea").val().trim()),
+         time: ($(this).parent().attr("id").trim())});
+     console.log(events);
+    localStorage.setItem("events", JSON.stringify(events));
  
 }))
 
@@ -161,113 +131,3 @@ $(".saveBtn").each(function() {
 //       events: []
 //     };
 //   }
-
-//   // loop over object properties
-//   $.each(tasks, function(list, arr) {
-//     console.log(list, arr);
-//     // then loop over sub-array
-//     arr.forEach(function(task) {
-//       createTask(task.text, task.date, list);
-//     });
-//   });
-// };
-
-// };  
-
-//Second part of function to save data
-    // $("textarea").each(function(){
-            
-    //     events.push($(this).attr("id"));
-
-
-// Save in events array
-// events.push(eventText);
-// console.log(events);
-// localStorage.setItem("events", JSON.stringify(events));
-
-// SUCCESSFUL Attempt#3
-// $(".saveBtn").each(function() {
-//     $(this).on("click", function(){
-//     var eventText = $(this).parent().find("textarea").val().trim();
-//     // var eventID = $(this).parent().attr("id").trim();
-//     events.push(eventText);
-//     console.log(events);
-//     localStorage.setItem("events", JSON.stringify(events));
- 
-// })
-
-// });
-
-
-
-// Attempt#4
-
-// var eventsAdd = function(data) {
-//     $(this).parent().find("textarea");
-//     var eventText = $("textarea").val();
-//     var eventID = $("textarea").attr("id");
-//     console.log(eventText[data]); 
-//     console.log(eventID[data])
-
-// };
-
-// $(".saveBtn").on("click", eventsAdd);
-
-// Attempt#3
-    // $(".saveBtn").each(function() {
-    //     $(this).on("click", (function(data){
-    //     $(this).parent().find("textarea");
-    //     var eventText = $("textarea").val();
-    //     var eventID = $("textarea").attr("id");
-    //     // $("textarea").each(function(){
-                
-    //     //     events.push($(this).attr("id"));
-
-
-    // Save in events array
-    // events.push(eventText);
-    // console.log(events);
-    // localStorage.setItem("events", JSON.stringify(events));
-    //     })
-
-    // )});
-
-
-
-
-//   object of time: "id"; events: value change events to an object with key value pairs
-
-// $(".row").each(function() {
-//     $(".saveBtn").on("click", function(){
-//       $(this) // RETURNS THE BUTTON CLICKED
-//     })
-// });
-
-// $(".saveBtn").parent() will give the div.row that the .saveBtn is in
-
-// $("div.row").find("textarea") would find a textarea inside of the div.row
-
-// $("div.row").find("section") will return the first section element that it finds in div.row
-
-// Attempts to consolidate above code into a more "DRY" function
-//Attempt #1
-// $each(".row").on("click", "button", function(id) {
-//     var eventText = $("id").val();
-//     console.log(eventText);
-//     // Save in events array
-//     events.push(eventText);
-//     console.log(events);
-//     localStorage.setItem("events", JSON.stringify(events));
-// }));
-
-//Attempt#2
-// $(".row").each(function() {
-//     $(".saveBtn").on("click", function(){
-//         $(this).parent().find("textarea");
-//         var eventText = $("textarea").val();
-//         var eventID = $("textarea").attr("id");
-//         console.log(eventText); 
-//         console.log(eventID)
-//         $("textarea").each(function(){
-//             events.push($(this).attr("id"));
-
