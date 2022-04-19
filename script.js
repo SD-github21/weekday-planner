@@ -97,9 +97,6 @@ if (currentHour === 17) {
 };
 
 
-
-var events = {};
-
 // Save button is clicked
 
 // Successfully coded for each timeblock
@@ -121,17 +118,60 @@ var events = {};
 //     localStorage.setItem("events", JSON.stringify(events));
 //     }));
 
+
+// Attempt#5
+// $(".saveBtn").each(function() {
+//     $(this).on("click", function(){
+//     var eventText = $(this).parent().find("textarea").val().trim();
+//     var eventId = $(this).parent().attr("id").trim();
+//     events["event"] = eventText;
+//     events["time"] = eventId;
+//     console.log(events);
+//     localStorage.setItem("events", JSON.stringify(events));
+events = [];
+
+
 // Attempt#3
 $(".saveBtn").each(function() {
     $(this).on("click", function(){
-    $(this).parent().find("textarea");
-    var eventText = $("textarea").val();
-    var eventID = $("textarea").attr("id");
-    console.log(eventText); 
-    console.log(eventID)
+    var eventText = $(this).parent().find("textarea").val().trim();
+    // var eventID = $(this).parent().attr("id").trim();
+    events.push(eventText);
+    console.log(events);
+    localStorage.setItem("events", JSON.stringify(events));
+ 
 })
 
 });
+
+var loadEvents = function(){
+    localStorage.getItem()
+}
+
+loadEvents();
+
+
+// var loadEvents = function() {
+//     events = JSON.parse(localStorage.getItem("events"));
+//       // if nothing in localStorage, create a new object to track all task status arrays
+//   if (!events) {
+//     events = {
+//       time: [],
+//       events: []
+//     };
+//   }
+
+//   // loop over object properties
+//   $.each(tasks, function(list, arr) {
+//     console.log(list, arr);
+//     // then loop over sub-array
+//     arr.forEach(function(task) {
+//       createTask(task.text, task.date, list);
+//     });
+//   });
+// };
+
+// };  
 
 //Second part of function to save data
     // $("textarea").each(function(){
@@ -143,23 +183,6 @@ $(".saveBtn").each(function() {
 // events.push(eventText);
 // console.log(events);
 // localStorage.setItem("events", JSON.stringify(events));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Attempt#4
@@ -232,3 +255,4 @@ $(".saveBtn").each(function() {
 //         console.log(eventID)
 //         $("textarea").each(function(){
 //             events.push($(this).attr("id"));
+
