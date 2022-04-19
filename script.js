@@ -128,27 +128,28 @@ if (currentHour === 17) {
 //     events["time"] = eventId;
 //     console.log(events);
 //     localStorage.setItem("events", JSON.stringify(events));
-events = [];
+events = {};
 
 
-// Attempt#3
 $(".saveBtn").each(function() {
-    $(this).on("click", function(){
-    var eventText = $(this).parent().find("textarea").val().trim();
-    // var eventID = $(this).parent().attr("id").trim();
-    events.push(eventText);
-    console.log(events);
-    localStorage.setItem("events", JSON.stringify(events));
+    $(this).on("click", (function(){
+     events.event = $(this).parent().find("textarea").val().trim();
+    events.time = $(this).parent().attr("id").trim();
+       console.log(events);
+       localStorage.setItem("events", JSON.stringify(events));
+
  
-})
+}))
 
 });
 
-var loadEvents = function(){
-    localStorage.getItem()
-}
 
-loadEvents();
+
+// var loadEvents = function(){
+//     localStorage.getItem()
+// }
+
+// loadEvents();
 
 
 // var loadEvents = function() {
@@ -183,6 +184,20 @@ loadEvents();
 // events.push(eventText);
 // console.log(events);
 // localStorage.setItem("events", JSON.stringify(events));
+
+// SUCCESSFUL Attempt#3
+// $(".saveBtn").each(function() {
+//     $(this).on("click", function(){
+//     var eventText = $(this).parent().find("textarea").val().trim();
+//     // var eventID = $(this).parent().attr("id").trim();
+//     events.push(eventText);
+//     console.log(events);
+//     localStorage.setItem("events", JSON.stringify(events));
+ 
+// })
+
+// });
+
 
 
 // Attempt#4
