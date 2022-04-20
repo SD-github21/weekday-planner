@@ -97,53 +97,35 @@ if (currentHour === 17) {
 };
 
 
-// Save button is clicked
-//Successfully was able to grab each calendar event and time, push to an array, and store in localStorage using each!
-events = [];
+// Save button is clicked and the corresponding textarea and row id are captured
 
 $(".saveBtn").each(function() {
     $(this).on("click", (function(){
-     events.push({ 
-         event: ($(this).parent().find("textarea").val().trim()),
-         time: ($(this).parent().attr("id").trim())});
-     console.log(events);
-    localStorage.setItem("events", JSON.stringify(events));
+     let event = ($(this).parent().find("textarea").val().trim());
+     let time = ($(this).parent().attr("id").trim());
+     
+    localStorage.setItem(time, event);
  
 }))
 
 });
 
-$(document).ready(function() {   
-    events = JSON.parse(localStorage.getItem("events"));
-    console.log(events);
-      // loop over object properties
+// On load and refresh, the data persist in the calendar
+$(document).ready(function(time, event) {
 
-      for (var i = 0; i < events.length; i++) {
-        if (events[i].time == $(".row").attr("id")) {
-            console.log(events[i].event);
-            } 
-    };
-  });
+    localStorage.getItem(time, event);
 
-
-// attempt #1
-//   $(document).ready(function() {   
-//     events = JSON.parse(localStorage.getItem("events"));
-//     console.log(events);
-//       // loop over object properties
-//   $(events).each(function() {
-//         if (events.time = $(".row").attr("id")) {
-//             console.log(events.time);
-//             // events.event = $(".row").attr("id").find("textarea").val()
-//             } else {
-//                 console.log("not working");
-//             }
-//     });
-//   });
+    $("#9amtext").val(localStorage.getItem("9am"));
+    $("#10amtext").val(localStorage.getItem("10am"));
+    $("#11amtext").val(localStorage.getItem("11am"));
+    $("#12pmtext").val(localStorage.getItem("12pm"));
+    $("#1pmtext").val(localStorage.getItem("1pm"));
+    $("#2pmtext").val(localStorage.getItem("2pm"));
+    $("#3pmtext").val(localStorage.getItem("3pm"));
+    $("#4pmtext").val(localStorage.getItem("4pm"));
+    $("#5amtext").val(localStorage.getItem("5am"));
 
 
+});
 
-    //   $(events).each(function() {
-    //     if (events.time = ) {
-    //         console.log(events.time);
-    //         // events.event = $(".row").attr("id").find("textarea").val()
+
