@@ -113,21 +113,37 @@ $(".saveBtn").each(function() {
 
 });
 
+$(document).ready(function() {   
+    events = JSON.parse(localStorage.getItem("events"));
+    console.log(events);
+      // loop over object properties
+
+      for (var i = 0; i < events.length; i++) {
+        if (events[i].time == $(".row").attr("id")) {
+            console.log(events[i].event);
+            } 
+    };
+  });
 
 
-// var loadEvents = function(){
-//     localStorage.getItem()
-// }
-
-// loadEvents();
-
-
-// var loadEvents = function() {
+// attempt #1
+//   $(document).ready(function() {   
 //     events = JSON.parse(localStorage.getItem("events"));
-//       // if nothing in localStorage, create a new object to track all task status arrays
-//   if (!events) {
-//     events = {
-//       time: [],
-//       events: []
-//     };
-//   }
+//     console.log(events);
+//       // loop over object properties
+//   $(events).each(function() {
+//         if (events.time = $(".row").attr("id")) {
+//             console.log(events.time);
+//             // events.event = $(".row").attr("id").find("textarea").val()
+//             } else {
+//                 console.log("not working");
+//             }
+//     });
+//   });
+
+
+
+    //   $(events).each(function() {
+    //     if (events.time = ) {
+    //         console.log(events.time);
+    //         // events.event = $(".row").attr("id").find("textarea").val()
