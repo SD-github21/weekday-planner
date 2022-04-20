@@ -137,5 +137,3 @@ $(document).ready(function () {
     $("#5pmtext").val(fivepmText);
 
 });
-
-
