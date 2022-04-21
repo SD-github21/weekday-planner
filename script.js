@@ -97,8 +97,8 @@ $(document).ready(function () {
         $(fivePmText).addClass("future")
     };
 
-    // Save button is clicked and the corresponding textarea and p tag with the time are captured
-
+    // Save button is clicked and the corresponding textarea input and p tag with the associated time
+    // are captured and stored in localStorage
     $(".saveBtn").on("click", function () {
 
         let event = $(this).siblings("textarea").val().trim();
@@ -108,7 +108,8 @@ $(document).ready(function () {
     });
 
 
-    // Allow the data to persist in the calendar
+    // The data that had been captured for each hour and stored in localStorage is extracted from localStorage
+    // and printed in the associated time blocks in the calendar upon refreshing the browser or reloading the page
     var nineamText = localStorage.getItem("9am");
     $("#9amtext").val(nineamText);
 
