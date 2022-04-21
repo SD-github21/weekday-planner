@@ -35,6 +35,7 @@ THEN the saved events persist<br>
 * CSS
 * JavaScript
 * jQuery
+* Moment.js
 
 ## **Deliverable**
 
@@ -43,4 +44,4 @@ https://sd-github21.github.io/weekday-planner/
 
 **Screen Shot of Work Day Scheduler:**<br>
 <br>
-![alt text]
+![alt text](screencapture-weekday-planner.png)
