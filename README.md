@@ -35,7 +35,7 @@ THEN the saved events persist<br>
 * CSS
 * JavaScript
 * jQuery
-* Moment.js
+* Moment.js library
 
 ## **Deliverable**
 
